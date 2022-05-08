@@ -36,16 +36,16 @@
       . get Zadig.exe from internet
       . Insert Jlink and correct detected in device manager in windows
       . Open Zadig.exe, options -> list all drivers, find jlink in left and select WinUSB right, the click Replace Driver (you can find guide in internet, if you want to recover jlink driver, you can use UsbDriverTool.exe)
-   ### c. now you can use openocd to connect to STM32F4 MCU
+   ### c. now you can use openocd to connect to STM32F1 MCU
       c:\>openocd -f interface/jlink.cfg -c "transport select swd" -f target/stm32f4x.cfg
         Open On-Chip Debugger 0.11.0 (2021-11-18) [https://github.com/sysprogs/openocd]
         ...
-        Info : stm32f4x.cpu: Cortex-M4 r0p1 processor detected
+        Info : stm32f1x.cpu: Cortex-M3 r1p1 processor detected
         ...
         Info : Listening on port 3333 for gdb connections
    ### d. !!! Stop openocd command by Ctrl + C, because previous step will affect Debug (Debug will start openocd automatically, if you started yet, Debug process will report error)
 ## 3. Debug
    ### a. Add a breakpoint in Core/Src/main.c
    ### b. In VS code: Run -> Start Debugging (F5)
-   ### c. Debug STM32F4x in VS code by openocd successfully
+   ### c. Debug STM32F1x in VS code by openocd successfully
 
