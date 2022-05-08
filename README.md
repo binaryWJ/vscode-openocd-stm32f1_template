@@ -37,7 +37,7 @@
       . Insert Jlink and correct detected in device manager in windows
       . Open Zadig.exe, options -> list all drivers, find jlink in left and select WinUSB right, the click Replace Driver (you can find guide in internet, if you want to recover jlink driver, you can use UsbDriverTool.exe)
    ### c. now you can use openocd to connect to STM32F1 MCU
-      c:\>openocd -f interface/jlink.cfg -c "transport select swd" -f target/stm32f4x.cfg
+      c:\>openocd -f interface/jlink.cfg -c "transport select swd" -f target/stm32f1x.cfg
         Open On-Chip Debugger 0.11.0 (2021-11-18) [https://github.com/sysprogs/openocd]
         ...
         Info : stm32f1x.cpu: Cortex-M3 r1p1 processor detected
